@@ -1,0 +1,29 @@
+<div>
+    <h2>Mis transacciones</h2>
+    <div>
+        {{!-- <p>{{date}}   {{destino}}  {{monto}}</p> --}}
+    </div>
+
+    <table>
+        <tr>
+            <th>Fecha</th>
+            <th>Destino</th>
+            <th>Monto</th>
+        </tr>
+        {{#each user.transacciones}}
+        <tr>
+            <td>{{date}}</td>
+            <td>{{destino}}</td>
+            <td>{{monto}}</td>
+        </tr>
+        {{/each}}
+    </table>
+
+    <a href="/nuevaOrden">
+        <button id="newOrder">Nueva transacción</button>
+    </a>
+    <a href="/">
+        <button >Ver saldo</button>
+    </a>
+</div>
+
