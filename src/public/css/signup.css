@@ -53,8 +53,8 @@ html, body{
 
 #formContent{
     padding: 2%;
-    /* width: 25%;
-    height: 40%; */
+    /* width: 25%; */
+    /* height: 40%; */
     background: linear-gradient(to bottom right, rgba(5, 142, 5, 0.8), rgba(233, 233, 138, 0.5));
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@ html, body{
     border-radius: 15%;
 }
 
-#loginForm{
+#signupForm{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 140%;
     /* margin: auto; */
@@ -101,10 +101,10 @@ html, body{
         font-size: 180%;
     }
 
-    /* #formContent{
-        width: 90%;
-        height: 50%;
-    } */
+    #formContent{
+        /* width: 90%; */
+        /* height: 50%; */
+    }
 
     /*#loginForm{
         /* width: 90%; */

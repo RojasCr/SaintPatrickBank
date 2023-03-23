@@ -3,15 +3,25 @@ const mongoose = require("mongoose");
 const userCollection = "users";
 
 const userSchema = new mongoose.Schema({
-    card_number: {
-        type: Number,
+    user: {
+        type: String,
         unique: true
     },
+    card_number: {
+        type: Array,
+        default: []
+    },
     pin: String,
-    saldo: Number,
+    saldo: {
+        type: Number,
+    },
     transacciones: {
         type: Array,
         default: []
+    },
+    email: {
+        type: String,
+        unique: true
     }
 });
 

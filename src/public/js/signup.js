@@ -1,4 +1,4 @@
-const form = document.getElementById("loginForm");
+const form = document.getElementById("signupForm");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -8,7 +8,7 @@ form.addEventListener("submit", (e) => {
 
     data.forEach((value, key) => obj[key] = value);
 
-    const url = "/auth/login";
+    const url = "/auth/signup";
     const headers = {
         "Content-Type": "application/json"
     }
@@ -26,7 +26,7 @@ form.addEventListener("submit", (e) => {
            window.location.href = response.url
            return;
         }
-        response.json()
+        return response.json()
     })
     .then(data => console.log(data))
     .catch(error => console.log(error));

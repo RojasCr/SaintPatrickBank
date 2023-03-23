@@ -1,4 +1,4 @@
-<img id="fondo" src="imagenes/fondo_home.jpg" alt="">
+<img id="fondo" src="../imagenes/fondo_home2.jpg" alt="">
 <div id="principal">
     <header id="header">
         <div>
@@ -24,8 +24,14 @@
         <h2>Saldo</h2>
         <p>${{user.saldo}}</p>
     </div>
-    <div>
         
+    <div>
+        <h3>Mis tarjetas</h3>
+        <ol>
+            {{#each user.card_number}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ol>
     </div>
     <aside id="cotizaciones"></aside>
 </div>

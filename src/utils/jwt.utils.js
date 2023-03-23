@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const generateToken = (user) => {
-    const token = jwt.sign({user}, process.env.SECRET_KEY, {expiresIn: "1m"});
+    const token = jwt.sign({user}, process.env.SECRET_KEY/*, {expiresIn: "1m"}*/);
     
     return token;
 }
@@ -20,7 +20,10 @@ const validateToken = (req, res, next) => {
         if(err) return res.status(401).send("Acceso denegado");
 
         //req.user = credentials.user;
-        res.cookie("user", credentials.user, {maxAge: 15000, httpOnly: true});
+        if(!req.cookies.user){
+            return res.cookie("user", credentials.user, {maxAge: 15000, httpOnly: true});
+        }
+        return res.cookie("user", req.cookies.user, {maxAge: 15000, httpOnly: true});
         //console.log(req.cookies.user)
     })
 

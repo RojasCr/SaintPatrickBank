@@ -1,9 +1,7 @@
-<div>
+<img src="../imagenes/fondo_transacciones2.png" alt="transacciones" id="fondo">
+<div id="principal">
     <h2>Mis transacciones</h2>
-    <div>
-        {{!-- <p>{{date}}   {{destino}}  {{monto}}</p> --}}
-    </div>
-
+    
     <table>
         <tr>
             <th>Fecha</th>
@@ -18,12 +16,13 @@
         </tr>
         {{/each}}
     </table>
-
-    <a href="/nuevaOrden">
-        <button id="newOrder">Nueva transacción</button>
-    </a>
-    <a href="/">
-        <button >Ver saldo</button>
-    </a>
+    <div id="operations">
+        <a href="/nuevaOrden">
+            <button id="newOrder">Nueva transacción</button>
+        </a>
+        <a href="/">
+            <button >Ver saldo</button>
+        </a>
+    </div>
 </div>
 

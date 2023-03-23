@@ -35,7 +35,7 @@ html, body{
     position: relative;
     /* top: 1rem;
     left: 40%; */
-    gap:10%;
+    gap:2%;
     font-size: xx-large;
     z-index: 2;
 }

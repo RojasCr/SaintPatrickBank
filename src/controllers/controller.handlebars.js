@@ -24,13 +24,18 @@ const publicAccess = (req, res, next) => {
     next();
 }
 
+//Plantillas
+
+router.get("/signup", publicAccess, (req, res) => {
+    res.render("signup", {style: "/css/signup.css"})
+})
 
 router.get("/login", publicAccess,(req, res) => {
     //console.log("gols")
     res.render("login", {style: "/css/login.css"});
 })
 
-router.get("/", /*privateAccess*/validateToken,async(req, res) => {
+router.get("/", validateToken,(req, res) => {
     const user = req.cookies.user;
     //const {card_number} = req.cookies.user/*req.session.user*/;
     //const user = await userModel.findOne({card_number});
@@ -42,7 +47,7 @@ router.get("/", /*privateAccess*/validateToken,async(req, res) => {
     res.cookie("accessToken", req.cookies.accessToken,{maxAge: 15000, httpOnly:true}).render("home", {user, style:"css/home.css"});
 })
 
-router.get("/transacciones", privateAccess,async(req, res) => {
+router.get("/transacciones", privateAccess,(req, res) => {
     // const {card_number} = req.cookies.user/*req.session.user*/;
     // const user = await userModel.findOne({card_number});
     // req.cookies.user = user
@@ -50,12 +55,13 @@ router.get("/transacciones", privateAccess,async(req, res) => {
     // const userStr = JSON.stringify(user);
     // const userObj = JSON.parse(userStr);
     const user = req.cookies.user;
+    //console.log(req.cookies.user)
     
     res.cookie("accessToken", req.cookies.accessToken,{maxAge: 15000, httpOnly: true}).render("transacciones", {user, style:"css/transacciones.css"});
 });
 
 router.get("/nuevaOrden", privateAccess,(req, res) => {
-    res.cookie("accessToken", req.cookies.accessToken,{maxAge: 15000, httpOnly: true}).render("nuevaOrden")
+    res.cookie("accessToken", req.cookies.accessToken,{maxAge: 15000, httpOnly: true}).render("nuevaOrden",{style: "css/nuevaOrden.css"})
 })
 
 module.exports = router;

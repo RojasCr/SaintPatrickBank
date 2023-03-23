@@ -1,22 +1,26 @@
-<div>
-    <form action="" id="orderForm">
-        <label for=""> Mail: 
-            <input type="email" name="email">
-        </label>
-        <p></p>
-        <label for=""> Destinatario: 
-            <input type="text" name="destino">
-        </label>
-        <p></p>
-        <label for=""> Monto: 
-            <input type="number" name="monto">
-        </label>
-        <p></p>
-        <button type="submit">Enviar</button>
-    </form>
-    <a href="/transacciones">
-        <button>Cancelar</button>
-    </a>
+<img src="../imagenes/fondo_nuevaOrden.jpg" alt="" id="fondo">
+<div id="principal">
+    <h2>Nueva Operación</h2>
+
+    <div id="formContent">
+        <form action="" id="orderForm">
+            
+            <label for="destino"> Destinatario: 
+                <input type="text" class="input" name="destino">
+            </label>
+            <p></p>
+            <label for="monto"> Monto: 
+                <input type="number" class="input" name="monto">
+            </label>
+            <p></p>
+            
+            {{!-- <div id="operations">
+                <button class="button"><a href="/transacciones">Cancelar</a></button>
+
+            </div> --}}
+                <button type="submit" >Enviar</button>
+        </form>
+    </div>
 </div>
 
 
