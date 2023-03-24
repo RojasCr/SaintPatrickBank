@@ -44,7 +44,7 @@ router.get("/", validateToken,(req, res) => {
     //console.log(user)
     //const {user} = req.session;
     //setTimeout(() => {res.clearCookie("accessToken"); console.log("cookie borrada")}, 15000);
-    res.cookie("accessToken", req.cookies.accessToken,{maxAge: 15000, httpOnly:true}).render("home", {user, style:"css/home.css"});
+    res.cookie("accessToken", req.cookies.accessToken,{/*maxAge: 15000,*/ httpOnly:true}).render("home", {user, style:"css/home.css"});
 })
 
 router.get("/transacciones", privateAccess,(req, res) => {

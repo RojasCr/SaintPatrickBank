@@ -57,12 +57,12 @@ router.post("/login", async(req, res) => {
         
         
         res.cookie("accessToken", token, {
-            maxAge: 15000,
+            //maxAge: 15000,
             httpOnly: true,
         })
         
         res.cookie("user", userObj,{
-            maxAge: 15000,
+            //maxAge: 15000,
             httpOnly: true
         });
         //req.session.user = user

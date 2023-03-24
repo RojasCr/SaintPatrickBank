@@ -28,7 +28,8 @@ html, body{
     align-items: center;
 
     margin: auto;
-    top: 2%
+    top: 2%;
+    font-size: 130%;
 }
 
 table{

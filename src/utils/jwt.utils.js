@@ -21,9 +21,9 @@ const validateToken = (req, res, next) => {
 
         //req.user = credentials.user;
         if(!req.cookies.user){
-            return res.cookie("user", credentials.user, {maxAge: 15000, httpOnly: true});
+            return res.cookie("user", credentials.user, {/*maxAge: 15000,*/ httpOnly: true});
         }
-        return res.cookie("user", req.cookies.user, {maxAge: 15000, httpOnly: true});
+        return res.cookie("user", req.cookies.user, {/*maxAge: 15000,*/ httpOnly: true});
         //console.log(req.cookies.user)
     })
 

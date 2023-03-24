@@ -20,18 +20,19 @@
             </ul>
         </nav>
     </header>
-    <div>
-        <h2>Saldo</h2>
-        <p>${{user.saldo}}</p>
-    </div>
-        
-    <div>
-        <h3>Mis tarjetas</h3>
-        <ol>
-            {{#each user.card_number}}
-            <li>{{this}}</li>
-            {{/each}}
-        </ol>
+    <div id="infoCuenta">
+        <div id="saldo">
+            <h2>Saldo</h2>
+            <p>${{user.saldo}}</p>
+        </div>
+        <div id="tarjetas">
+            <h3>Mis tarjetas</h3>
+            <ol>
+                {{#each user.card_number}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ol>
+        </div>
     </div>
     <aside id="cotizaciones"></aside>
 </div>

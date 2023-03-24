@@ -94,28 +94,38 @@ html, body{
     /* height: 10%; */
 }
 
+.enlaces{
+    font-size: 80%;
+    margin-top: 3%;
+}
+
 
 @media (max-width: 600px){
-
+    
     #title{
         font-size: 180%;
     }
-
-    /* #formContent{
-        width: 90%;
-        height: 50%;
-    } */
-
+    
+    #formContent{
+        padding: 5%;
+        top: 15%;
+    }
+    
     /*#loginForm{
         /* width: 90%; */
         /* height: 100%;
     }*/
-
+    
     .input{
         width: 80%;
     }
-
+    
     .submit{
         font-size: 110%;
+    }
+
+    .enlaces{
+        font-size: 90%;
+        margin-top: 5%;
     }
 }
