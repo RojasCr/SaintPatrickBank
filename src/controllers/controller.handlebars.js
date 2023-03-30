@@ -55,7 +55,7 @@ router.get("/transacciones", privateAccess,(req, res) => {
     // const userStr = JSON.stringify(user);
     // const userObj = JSON.parse(userStr);
     const user = req.cookies.user;
-    console.log(new Date().toLocaleString())
+    
     
     res.cookie("accessToken", req.cookies.accessToken,{/*maxAge: 15000,*/ httpOnly: true}).render("transacciones", {user, style:"css/transacciones.css"});
 });

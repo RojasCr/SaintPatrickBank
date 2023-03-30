@@ -34,9 +34,7 @@ mongoose.connect(
         useNewUrlParser: true
     }
 )
-
-console.log(process.env.DB_NAME)
-
-
+.then(() => console.log("DB connected"))
+.catch(error => console.log(error))
 
 module.exports = {app};
